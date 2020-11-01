@@ -21,6 +21,10 @@ a:hover {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.1vw;
+font-family: 'Roboto', sans-serif;
+}
 
 /*nav bar*/
 .navbar {
@@ -118,6 +122,20 @@ a:hover {
   height: 40vh;
 }
 
+#mangroves {
+  background-color: #061f33;
+  text-transform:none;
+  text-shadow: 0 1px 0 black;
+  color:#ffffff;
+  width:55%;
+  top: 0; bottom: 0; left: 0; right: 0;
+  position:absolute;
+  margin: auto;
+  height: 40vh;
+  padding:1.4em;
+}
+
+
 #spacer-intro {
   position: relative;
   width: 100%;
@@ -152,8 +170,8 @@ a:hover {
   top: 0; bottom: 0; left: 0; right: 0;
   position:relative;
   margin: auto;
-    z-index:101;
-    padding:1.4em;
+  z-index:101;
+  padding:1.4em;
   color:#000;
 }
 
@@ -165,7 +183,7 @@ a:hover {
 }
 
 #krooman-and-gungulung {
-  background-color: #000000;
+  background-color: #061f33;
   width:35%;
   top: 0; bottom: 0; left: 0; right: 0;
   position:relative;
@@ -173,6 +191,8 @@ a:hover {
     z-index:101;
     padding:1.4em;
   color:#fff;
+  font-size: 1.1vw;
+  font-family: 'Roboto', sans-serif;
 }
 
 #fullbanner {
@@ -181,17 +201,16 @@ a:hover {
   background-position: top left;
   background:linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.5)),
-      url("https://belizenyucapstone2020.github.io/resilient-belize-city/images/krooman-lagoon-flood.jpg");
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.4)),
+      url("/images/mangroves.jpg");
   position: relative;
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   font-size: 1.1vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
   z-index: 160;
-  text-align:center;
 }
 
 
@@ -259,15 +278,6 @@ button:active {
   background-color: #000000;
 }
 
-/* Chapters */
-section.active {
-  opacity: 1;
-}
-
-section:last-child {
-  border-bottom: none;
-  margin-bottom: 200px;
-}
 
 /* Zone toggles */
 #menu {
