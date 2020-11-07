@@ -63,7 +63,7 @@ font-family: 'Roboto', sans-serif;
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.5)),
-      url("https://d1ay7qnb0dqwzm.cloudfront.net/295401.900.9f22d9a0c9.jpg");
+      url("http://belizenyucapstone2020.github.io/resilient-belize-city/images/cover.jpg");
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -195,7 +195,7 @@ font-family: 'Roboto', sans-serif;
       to bottom,
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.4)),
-      url("/images/bchouses.jpg");
+      url("http://belizenyucapstone2020.github.io/resilient-belize-city/images/bchouses.jpg");
  background-position: center; /* Center the image */
  background-repeat: no-repeat; /* Do not repeat the image */
  background-size: cover; /* Resize the background image to cover the entire container */
