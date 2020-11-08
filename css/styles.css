@@ -181,7 +181,7 @@ z-index: 160;
   opacity: 1;
 }
 
-#mangroves {
+#mangrove {
   background-color: #061f33;
   text-transform: none;
   text-shadow: 0 1px 0 black;
@@ -195,6 +195,7 @@ z-index: 160;
   margin: auto;
   height: 40vh;
   padding: 1.4em;
+  z-index: 170;
 }
 
 .spacer-full {
@@ -218,10 +219,17 @@ z-index: 160;
   z-index: 101;
 }
 
-.spacer4 {
+.spacer40 {
   position: relative;
   width: 100%;
   min-height: 40vh;
+  z-index: 101;
+}
+
+.spacer80 {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
   z-index: 101;
 }
 
@@ -265,10 +273,10 @@ z-index: 160;
 
 #buildings-full {
   background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.4)),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.3)),
     url("http://belizenyucapstone2020.github.io/resilient-belize-city/images/bchouses.jpg");
-  background-position: center;
+  background-position: bottom left;
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
@@ -293,7 +301,7 @@ z-index: 160;
   position: relative;
   margin: auto;
   z-index: 101;
-  padding: 1.4em;
+  padding: 12px;
   color: #000;
 }
 
@@ -321,7 +329,7 @@ z-index: 160;
   font-family: 'Roboto', sans-serif;
 }
 
-#fullbanner {
+#mangrove-banner {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top left;
@@ -335,7 +343,18 @@ z-index: 160;
   font-size: 1.1vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
-  z-index: 160;
+  z-index: 180;
+}
+
+#mangrove-loss {
+  background-color: #0c273e;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.1vw;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8vw;
+  z-index: 180;
 }
 
 h1 {
