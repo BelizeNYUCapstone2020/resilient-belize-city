@@ -1,6 +1,6 @@
 // My mapboxGL token
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmVsaXplY2Fwc3RvbmV0ZWFtIiwiYSI6ImNrZnk2dWpzaDBzejIydm5vM2s2NWcxaDIifQ.DbWM6YOd-hVhlk8Nc6oJPg';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmVsaXplY2Fwc3RvbmV0ZWFtIiwiYSI6ImNrZnk2dGlxbDF4bG0ycnMzbjE0bW93d2EifQ.kGTmcCz-Kbts-Do75nSk0Q';
 
 // Initial center point and zoom level
 var initialCenterPoint = [-88.203689, 17.499550]
@@ -9,7 +9,7 @@ var initialZoom = 13.6
 // create an object to hold the initialization options for a mapboxGL map
 var initOptions = {
   container: 'map', // put the map in this container
-  style: 'mapbox://styles/belizecapstoneteam/ckgy7r1zd03rt19q1qx8e5oh5', // use this basemap
+  style: 'mapbox://styles/belizecapstoneteam/ckhb6bf8p09g619mufeji7wpv', // use this basemap
   center: initialCenterPoint, // initial view center
   zoom: initialZoom, // initial view zoom level (0-18)
 }
@@ -23,17 +23,11 @@ map.scrollZoom.disable();
 // wait for the initial style to Load
 map.on('style.load', function() {
 
-  map.addSource('buildings', {
+map.addSource('buildings', {
   type: 'geojson',
   data: './data/buildings.geojson',
 });
 
-map.addSource('buildings-red', {
-type: 'geojson',
-data: './data/buildings-red.geojson',
-});
-
-// zone 1
 map.addLayer({
   'id': 'mimosa',
   'type': 'fill',
@@ -47,6 +41,12 @@ map.addLayer({
     'fill-outline-color': '#EFC050'
   }
 });
+
+map.addSource('buildings-red', {
+  type: 'geojson',
+  data: './data/buildings-red.geojson',
+});
+
 
 map.addLayer({
   'id': 'red',
@@ -62,163 +62,299 @@ map.addLayer({
   }
 });
 
-  map.on('load', function() {
-    map.addSource('kroomanpoly', {
-      'type': 'geojson',
-      'data': {
-        'type': 'Feature',
-        'geometry': {
-          'type': 'Polygon',
-          'coordinates': [
-            [
-              [
-                -88.20899248123168,
-                17.498351245579787
-              ],
-              [
-                -88.20794105529785,
-                17.497880556150538
-              ],
-              [
-                -88.20770502090454,
-                17.496693594785576
-              ],
-              [
-                -88.20802688598631,
-                17.495608950898212
-              ],
-              [
-                -88.20905685424805,
-                17.49589546123335
-              ],
-              [
-                -88.20955038070679,
-                17.495035928873097
-              ],
-              [
-                -88.21096658706664,
-                17.49593639124436
-              ],
-              [
-                -88.21083784103394,
-                17.496304760928698
-              ],
-              [
-                -88.21650266647339,
-                17.49927215615463
-              ],
-              [
-                -88.21624517440794,
-                17.49998841670869
-              ],
-              [
-                -88.21725368499756,
-                17.50072513890468
-              ],
-              [
-                -88.21725368499756,
-                17.501154892139624
-              ],
-              [
-                -88.21637392044067,
-                17.501011641174248
-              ],
-              [
-                -88.21596622467041,
-                17.50047956517121
-              ],
-              [
-                -88.21568727493286,
-                17.500684209972142
-              ],
-              [
-                -88.21512937545776,
-                17.500622816556064
-              ],
-              [
-                -88.21452856063843,
-                17.500315849164544
-              ],
-              [
-                -88.21467876434326,
-                17.49990655850254
-              ],
-              [
-                -88.21512937545776,
-                17.500070274877967
-              ],
-              [
-                -88.21536540985107,
-                17.49941540849129
-              ],
-              [
-                -88.21455001831055,
-                17.498965186481527
-              ],
-              [
-                -88.21362733840942,
-                17.49998841670869
-              ],
-              [
-                -88.21306943893433,
-                17.500049810339096
-              ],
-              [
-                -88.21178197860718,
-                17.499476802315293
-              ],
-              [
-                -88.21133136749268,
-                17.499599589901074
-              ],
-              [
-                -88.21043014526367,
-                17.499394943878674
-              ],
-              [
-                -88.21038722991943,
-                17.499149368347606
-              ],
-              [
-                -88.20995807647705,
-                17.499087974412998
-              ],
-              [
-                -88.20963621139525,
-                17.499149368347606
-              ],
-              [
-                -88.20944309234619,
-                17.498699145678756
-              ],
-              [
-                -88.20905685424805,
-                17.49849449864237
-              ]
-            ]
+map.addSource('kroomanpoly', {
+  'type': 'geojson',
+  'data': {
+    'type': 'Feature',
+    'geometry': {
+      'type': 'Polygon',
+      'coordinates': [
+        [
+          [
+            -88.20899248123168,
+            17.498351245579787
+          ],
+          [
+            -88.20794105529785,
+            17.497880556150538
+          ],
+          [
+            -88.20770502090454,
+            17.496693594785576
+          ],
+          [
+            -88.20802688598631,
+            17.495608950898212
+          ],
+          [
+            -88.20905685424805,
+            17.49589546123335
+          ],
+          [
+            -88.20955038070679,
+            17.495035928873097
+          ],
+          [
+            -88.21096658706664,
+            17.49593639124436
+          ],
+          [
+            -88.21083784103394,
+            17.496304760928698
+          ],
+          [
+            -88.21650266647339,
+            17.49927215615463
+          ],
+          [
+            -88.21624517440794,
+            17.49998841670869
+          ],
+          [
+            -88.21725368499756,
+            17.50072513890468
+          ],
+          [
+            -88.21725368499756,
+            17.501154892139624
+          ],
+          [
+            -88.21637392044067,
+            17.501011641174248
+          ],
+          [
+            -88.21596622467041,
+            17.50047956517121
+          ],
+          [
+            -88.21568727493286,
+            17.500684209972142
+          ],
+          [
+            -88.21512937545776,
+            17.500622816556064
+          ],
+          [
+            -88.21452856063843,
+            17.500315849164544
+          ],
+          [
+            -88.21467876434326,
+            17.49990655850254
+          ],
+          [
+            -88.21512937545776,
+            17.500070274877967
+          ],
+          [
+            -88.21536540985107,
+            17.49941540849129
+          ],
+          [
+            -88.21455001831055,
+            17.498965186481527
+          ],
+          [
+            -88.21362733840942,
+            17.49998841670869
+          ],
+          [
+            -88.21306943893433,
+            17.500049810339096
+          ],
+          [
+            -88.21178197860718,
+            17.499476802315293
+          ],
+          [
+            -88.21133136749268,
+            17.499599589901074
+          ],
+          [
+            -88.21043014526367,
+            17.499394943878674
+          ],
+          [
+            -88.21038722991943,
+            17.499149368347606
+          ],
+          [
+            -88.20995807647705,
+            17.499087974412998
+          ],
+          [
+            -88.20963621139525,
+            17.499149368347606
+          ],
+          [
+            -88.20944309234619,
+            17.498699145678756
+          ],
+          [
+            -88.20905685424805,
+            17.49849449864237
           ]
-        }
-      }
-    });
+        ]
+      ]
+    }
+  }
+});
 
 
-    map.addLayer({
-      'id': 'krooman',
-      'type': 'fill',
-      'source': 'kroomanpoly',
-      'layout': {
-        'visibility': 'none'
-      },
-      'paint': {
-        'fill-color': '#000000',
-        'fill-opacity': 0.5,
-        'fill-outline-color': '#2352ff'
-      }
-    });
+map.addLayer({
+  'id': 'krooman',
+  'type': 'fill',
+  'source': 'kroomanpoly',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#000000',
+    'fill-opacity': 0.5,
+    'fill-outline-color': '#2352ff'
+  }
+});
+
+map.addSource('crime1', {
+  type: 'geojson',
+  data: './data/crime2.geojson',
+});
 
 
+map.addLayer({
+  'id': 'crime1',
+  'type': 'fill',
+  'source': 'crime1',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#D01C1F',
+    'fill-opacity': .5,
+    'fill-outline-color': '#D01C1F'
+  }
+});
 
-  });
+map.addSource('crime2', {
+  type: 'geojson',
+  data: './data/crime3.geojson',
+});
+
+
+map.addLayer({
+  'id': 'crime2',
+  'type': 'fill',
+  'source': 'crime2',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#658DC6',
+    'fill-opacity': .5,
+    'fill-outline-color': '#658DC6'
+  }
+});
+
+map.addSource('crime3', {
+  type: 'geojson',
+  data: './data/crime4.geojson',
+});
+
+
+map.addLayer({
+  'id': 'crime3',
+  'type': 'fill',
+  'source': 'crime3',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#D01C1F',
+    'fill-opacity': .8,
+    'fill-outline-color': '#D01C1F'
+  }
+});
+
+map.addSource('crime4', {
+  type: 'geojson',
+  data: './data/crime5.geojson',
+});
+
+
+map.addLayer({
+  'id': 'crime4',
+  'type': 'fill',
+  'source': 'crime4',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#D01C1F',
+    'fill-opacity': .8,
+    'fill-outline-color': '#D01C1F'
+  }
+});
+
+map.addSource('crime5', {
+  type: 'geojson',
+  data: './data/crime6.geojson',
+});
+
+
+map.addLayer({
+  'id': 'crime5',
+  'type': 'fill',
+  'source': 'crime5',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#D01C1F',
+    'fill-opacity': .8,
+    'fill-outline-color': '#D01C1F'
+  }
+});
+
+map.addSource('crime6', {
+  type: 'geojson',
+  data: './data/crime7.geojson',
+});
+
+
+map.addLayer({
+  'id': 'crime6',
+  'type': 'fill',
+  'source': 'crime6',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#D01C1F',
+    'fill-opacity': .8,
+    'fill-outline-color': '#D01C1F'
+  }
+});
+
+map.addSource('crime', {
+  type: 'geojson',
+  data: './data/crime.geojson',
+});
+
+
+map.addLayer({
+  'id': 'crime',
+  'type': 'fill',
+  'source': 'crime',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#D01C1F',
+    'fill-opacity': .8,
+    'fill-outline-color': '#D01C1F'
+  }
+});
+
 });
 
 var chapters = {
@@ -244,7 +380,13 @@ var chapters = {
   'buildings': {
     center: [-88.203689, 17.499550],
     zoom: 13.6,
+  },
+
+  'crime': {
+    center: [-88.203689, 17.499550],
+    zoom: 13.6,
   }
+
 };
 
 
@@ -284,6 +426,35 @@ function setActiveChapter(chapterName) {
   if (activeChapterName === 'buildings')
     map.setLayoutProperty('red', 'visibility', 'visible');
   else map.setLayoutProperty('red', 'visibility', 'none');
+
+  if (activeChapterName === 'crime')
+    map.setLayoutProperty('crime1', 'visibility', 'visible');
+  else map.setLayoutProperty('crime1', 'visibility', 'none');
+
+  if (activeChapterName === 'crime')
+    map.setLayoutProperty('crime2', 'visibility', 'visible');
+  else map.setLayoutProperty('crime2', 'visibility', 'none');
+
+  if (activeChapterName === 'crime')
+    map.setLayoutProperty('crime3', 'visibility', 'visible');
+  else map.setLayoutProperty('crime3', 'visibility', 'none');
+
+  if (activeChapterName === 'crime')
+    map.setLayoutProperty('crime4', 'visibility', 'visible');
+  else map.setLayoutProperty('crime4', 'visibility', 'none');
+
+  if (activeChapterName === 'crime')
+    map.setLayoutProperty('crime5', 'visibility', 'visible');
+  else map.setLayoutProperty('crime5', 'visibility', 'none');
+
+  if (activeChapterName === 'crime')
+    map.setLayoutProperty('crime6', 'visibility', 'visible');
+  else map.setLayoutProperty('crime6', 'visibility', 'none');
+
+  if (activeChapterName === 'crime')
+    map.setLayoutProperty('crime', 'visibility', 'visible');
+  else map.setLayoutProperty('crime', 'visibility', 'none');
+
 
 }
 
