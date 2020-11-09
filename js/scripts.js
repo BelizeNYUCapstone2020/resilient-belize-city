@@ -370,16 +370,16 @@ var chapters = {
     pitch: 0
   },
 
+  'buildings': {
+    center: [-88.203689, 17.499550],
+    zoom: 13.6,
+  },
+
   'krooman': {
     duration: 6000,
     center: [-88.218718, 17.497795],
     zoom: 14.45,
     pitch: 0
-  },
-
-  'buildings': {
-    center: [-88.203689, 17.499550],
-    zoom: 13.6,
   },
 
   'crime': {
