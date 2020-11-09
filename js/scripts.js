@@ -43,7 +43,8 @@ map.addLayer({
   },
   'paint': {
     'fill-color': '#EFC050',
-    'fill-opacity': 0.8,
+    'fill-opacity': .8,
+    'fill-outline-color': '#EFC050'
   }
 });
 
@@ -56,7 +57,8 @@ map.addLayer({
   },
   'paint': {
     'fill-color': '#D01C1F',
-    'fill-opacity': 1,
+    'fill-opacity': .8,
+    'fill-outline-color': '#D01C1F'
   }
 });
 
