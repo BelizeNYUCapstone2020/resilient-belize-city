@@ -28,6 +28,10 @@ map.on('style.load', function() {
   data: './data/buildings.geojson',
 });
 
+map.addSource('buildings-red', {
+type: 'geojson',
+data: './data/buildings-red.geojson',
+});
 
 // zone 1
 map.addLayer({
@@ -39,7 +43,20 @@ map.addLayer({
   },
   'paint': {
     'fill-color': '#EFC050',
-    'fill-opacity': 0.9,
+    'fill-opacity': 0.8,
+  }
+});
+
+map.addLayer({
+  'id': 'red',
+  'type': 'fill',
+  'source': 'buildings-red',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#D01C1F',
+    'fill-opacity': 1,
   }
 });
 
@@ -263,8 +280,8 @@ function setActiveChapter(chapterName) {
   else map.setLayoutProperty('mimosa', 'visibility', 'none');
 
   if (activeChapterName === 'buildings')
-    map.setLayoutProperty('mimosa2', 'visibility', 'visible');
-  else map.setLayoutProperty('mimosa2', 'visibility', 'none');
+    map.setLayoutProperty('red', 'visibility', 'visible');
+  else map.setLayoutProperty('red', 'visibility', 'none');
 
 }
 
