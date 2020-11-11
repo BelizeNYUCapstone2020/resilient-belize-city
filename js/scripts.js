@@ -215,125 +215,6 @@ map.addLayer({
   }
 });
 
-map.addSource('crime1', {
-  type: 'geojson',
-  data: './data/crime2.geojson',
-});
-
-
-map.addLayer({
-  'id': 'crime1',
-  'type': 'fill',
-  'source': 'crime1',
-  'layout': {
-    'visibility': 'none'
-  },
-  'paint': {
-    'fill-color': '#D01C1F',
-    'fill-opacity': .5,
-    'fill-outline-color': '#D01C1F'
-  }
-});
-
-map.addSource('crime2', {
-  type: 'geojson',
-  data: './data/crime3.geojson',
-});
-
-
-map.addLayer({
-  'id': 'crime2',
-  'type': 'fill',
-  'source': 'crime2',
-  'layout': {
-    'visibility': 'none'
-  },
-  'paint': {
-    'fill-color': '#658DC6',
-    'fill-opacity': .5,
-    'fill-outline-color': '#658DC6'
-  }
-});
-
-map.addSource('crime3', {
-  type: 'geojson',
-  data: './data/crime4.geojson',
-});
-
-
-map.addLayer({
-  'id': 'crime3',
-  'type': 'fill',
-  'source': 'crime3',
-  'layout': {
-    'visibility': 'none'
-  },
-  'paint': {
-    'fill-color': '#D01C1F',
-    'fill-opacity': .8,
-    'fill-outline-color': '#D01C1F'
-  }
-});
-
-map.addSource('crime4', {
-  type: 'geojson',
-  data: './data/crime5.geojson',
-});
-
-
-map.addLayer({
-  'id': 'crime4',
-  'type': 'fill',
-  'source': 'crime4',
-  'layout': {
-    'visibility': 'none'
-  },
-  'paint': {
-    'fill-color': '#D01C1F',
-    'fill-opacity': .8,
-    'fill-outline-color': '#D01C1F'
-  }
-});
-
-map.addSource('crime5', {
-  type: 'geojson',
-  data: './data/crime6.geojson',
-});
-
-
-map.addLayer({
-  'id': 'crime5',
-  'type': 'fill',
-  'source': 'crime5',
-  'layout': {
-    'visibility': 'none'
-  },
-  'paint': {
-    'fill-color': '#D01C1F',
-    'fill-opacity': .8,
-    'fill-outline-color': '#D01C1F'
-  }
-});
-
-map.addSource('crime6', {
-  type: 'geojson',
-  data: './data/crime7.geojson',
-});
-
-
-map.addLayer({
-  'id': 'crime6',
-  'type': 'fill',
-  'source': 'crime6',
-  'layout': {
-    'visibility': 'none'
-  },
-  'paint': {
-    'fill-color': '#D01C1F',
-    'fill-opacity': .8,
-    'fill-outline-color': '#D01C1F'
-  }
-});
 
 map.addSource('crime', {
   type: 'geojson',
@@ -351,7 +232,7 @@ map.addLayer({
   'paint': {
     'fill-color': '#D01C1F',
     'fill-opacity': .8,
-    'fill-outline-color': '#D01C1F'
+    'fill-outline-color': '#000000'
   }
 });
 
@@ -382,7 +263,7 @@ var chapters = {
     pitch: 0
   },
 
-  'crime': {
+  'crimechap': {
     center: [-88.203689, 17.499550],
     zoom: 13.6,
   }
@@ -427,31 +308,7 @@ function setActiveChapter(chapterName) {
     map.setLayoutProperty('red', 'visibility', 'visible');
   else map.setLayoutProperty('red', 'visibility', 'none');
 
-  if (activeChapterName === 'crime')
-    map.setLayoutProperty('crime1', 'visibility', 'visible');
-  else map.setLayoutProperty('crime1', 'visibility', 'none');
-
-  if (activeChapterName === 'crime')
-    map.setLayoutProperty('crime2', 'visibility', 'visible');
-  else map.setLayoutProperty('crime2', 'visibility', 'none');
-
-  if (activeChapterName === 'crime')
-    map.setLayoutProperty('crime3', 'visibility', 'visible');
-  else map.setLayoutProperty('crime3', 'visibility', 'none');
-
-  if (activeChapterName === 'crime')
-    map.setLayoutProperty('crime4', 'visibility', 'visible');
-  else map.setLayoutProperty('crime4', 'visibility', 'none');
-
-  if (activeChapterName === 'crime')
-    map.setLayoutProperty('crime5', 'visibility', 'visible');
-  else map.setLayoutProperty('crime5', 'visibility', 'none');
-
-  if (activeChapterName === 'crime')
-    map.setLayoutProperty('crime6', 'visibility', 'visible');
-  else map.setLayoutProperty('crime6', 'visibility', 'none');
-
-  if (activeChapterName === 'crime')
+  if (activeChapterName === 'crimechap')
     map.setLayoutProperty('crime', 'visibility', 'visible');
   else map.setLayoutProperty('crime', 'visibility', 'none');
 
@@ -491,3 +348,8 @@ function cycleBackgrounds(interval) {
 document.addEventListener("DOMContentLoaded", function() {
   cycleBackgrounds(2000);
 });
+
+$('.imageGallery1 a').simpleLightbox();
+var $ = require('jquery');
+var SimpleLightbox = require('simple-lightbox');
+SimpleLightbox.registerAsJqueryPlugin($);

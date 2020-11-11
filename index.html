@@ -8,13 +8,14 @@
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
   <link href='css/styles.css' rel='stylesheet' />
   <link href="https://fonts.googleapis.com/css?family=Inter|Roboto&display=swap" rel="stylesheet">
+  <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/dc4d523656.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
   <div class="navbar">
-    <B><a href="https://www.belizeplanners.org/" target="_blank">&nbsp;&nbsp; Belize Association of Planners</a></B>
+    <B><a href="https://www.belizeplanners.org/" target="_blank" style="color:white">&nbsp;&nbsp; Belize Association of Planners</a></B>
   </div>
 
   <div id="map">
@@ -116,29 +117,39 @@
       <div class="spacer60"></div>
 
       <div id="informals-where"></div>
-      <div id="krooman-and-gungulung">Here we could say something like Krooman Lagoon and Gungulung are two informal settlement areas located on environmentally vulnerable land. We could show them in outline.
-        I made a rough polygon showing Krooman Lagoon area based on a map on BAP's website, but I can't figure out where Gungulung is.
-        <p>As this report from Belize City's News Channel 5 shows, residents of Krooman Lagoon and other flood-prone areas have made many attempts to adapt to the flooding they experience, but greater intervention is needed.</p>
+      <div id="krooman-and-gungulung">
+        <p>Krooman Lagoon and Gungulung are both located on publicly owned land designated as environmentally protected zones. This land is highly unsuitable for housing as it is swampy and flood-prone. </p>
+
+        <p>As this report from Belize City's News Channel 5 shows, residents of Krooman Lagoon and other flood-prone areas have made many attempts to adapt to the flooding they experience, but greater intervention is needed to protect these
+          communities from flood risk.</p>
         <div class="video-container"><iframe src="https://www.youtube.com/embed/0-AKr37G9CQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
       </div>
       <div class="spacer60"></div>
     </section>
-    <div id="mangrove-banner">
+    <section id="crimechap">
+      <div id="mangrove-banner">
 
         <div class="spacer10"></div>
         <div id="mangrove">
           <h2 style>Environmental Degradation</h2>
-          <P>Development in ecologically sensitive areas is destroying natural flood protection. As both squatter communities and suburban towns are expanding into vulnerable mangrove wetlands, the development is destroying
-            these natural buffers against flooding and storm surge. Mangroves are also natural drainage
-            basins, helping to ease the strain on strained stormwater infrastructure. As the natural areas are reduced, the city and suburbs become more susceptible to storm damage and flooding. </p>
+          <P>Mangorve wetlands are one of Belize City's most prized natural resources. The mangroves are a vital part of the ecosystem, and are home to many plant and fish species. Mangroves also serve as storm protection: they are
+            buffers against wind and waves, and natural flood basins, absorbing water and reducing pressure on stormwater infrastructure. Mangrove forests also protect inland communities and freshwater resources from
+            saltwater intrusion.</p>
+          <p>However, development in ecologically sensitive areas is reducing Belize City's mangrove wetlands. From 1980 to 2010, Belize City and the nearby cayes <a
+              href="https://www.researchgate.net/publication/257579955_Identification_of_Threatened_and_Resilient_Mangroves_in_the_Belize_Barrier_Reef_System" target="_blank"><b>lost 2,074 acres of mangrove coverage</a></b>. The decline of mangroves
+            is driven
 
-          <img src="http://belizenyucapstone2020.github.io/resilient-belize-city/images/mangroves.png" style="max-height:50vh">
+            <body>
+              unplanned development, including informal settlements and suburban commuter towns that are sprawling into wetland areas as the grow. </p>
+          <a href="#" data-featherlight="/images/mangroves.png"><img src="/images/mangroves-small.png" style="max-height:40vh"></a><BR>
+          <span style="font-size:.6em">These satellite images are from the CATHALAC study <i><a href="https://www.researchgate.net/publication/257579955_Identification_of_Threatened_and_Resilient_Mangroves_in_the_Belize_Barrier_Reef_System"
+                target="_blank">Identification of Threatened and Resilient Mangroves in the Belize Barrier Reef System</a></i>. Click to expand.</i></span>
         </div>
-        <section id="crime">
+
         <div class="spacer10"></div>
-    </div>
-    <div class="spacer-full"></div>
+      </div>
+      <div class="spacer-full"></div>
     </section>
 
   </div>
@@ -147,7 +158,7 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
   <script src='js/scripts.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>

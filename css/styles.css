@@ -6,24 +6,27 @@ body {
 }
 
 a:link {
-  color: #fff;
+  color: #b98289;
   text-decoration: none;
 }
 
 a:visited {
-  color: #fff;
+  color: #b98289;
   text-decoration: none;
 }
 
 a:hover {
-  color: #fff;
+  color: #b98289;
   text-decoration: none;
 }
+
 
 p {
   font-size: 1.1vh;
   font-family: 'Roboto', sans-serif;
 }
+
+
 
 /*nav bar*/
 .navbar {
@@ -355,7 +358,7 @@ z-index: 160;
     url("http://belizenyucapstone2020.github.io/resilient-belize-city/images/mangroves.jpg");
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 110vh;
   font-size: 1.1vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
@@ -367,7 +370,7 @@ z-index: 160;
   text-transform: none;
   text-shadow: 0 1px 0 black;
   color: #ffffff;
-  max-height:80vh;
+  max-height:90vh;
   width: 55%;
   top: 0;
   bottom: 0;
@@ -379,6 +382,21 @@ z-index: 160;
   z-index: 170;
 }
 
+.featherlight .featherlight-content {
+    border: 0;
+    padding: 0;
+}
+
+.featherlight .featherlight-image {
+    border: 1px solid #fff;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .featherlight .featherlight-image {
+        border: 10px solid #fff;
+    }
+}
 
 h1 {
   font-size: 4.2vw;
