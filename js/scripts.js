@@ -56,9 +56,9 @@ map.addLayer({
     'visibility': 'none'
   },
   'paint': {
-    'fill-color': '#D01C1F',
-    'fill-opacity': .8,
-    'fill-outline-color': '#D01C1F'
+    'fill-color': '#f60040',
+    'fill-opacity': .6,
+    'fill-outline-color': '#f60040'
   }
 });
 
@@ -230,7 +230,7 @@ map.addLayer({
     'visibility': 'none'
   },
   'paint': {
-    'fill-color': '#D01C1F',
+    'fill-color': '#f60040',
     'fill-opacity': .8,
     'fill-outline-color': '#000000'
   }
@@ -263,9 +263,14 @@ var chapters = {
     pitch: 0
   },
 
+  'vibchap': {
+    center: [-88.196192, 17.491884],
+    zoom: 14.45,
+  },
+
   'crimechap': {
-    center: [-88.203689, 17.499550],
-    zoom: 13.6,
+    center: [-88.196192, 17.491884],
+    zoom: 14.45,
   }
 
 };
@@ -348,8 +353,3 @@ function cycleBackgrounds(interval) {
 document.addEventListener("DOMContentLoaded", function() {
   cycleBackgrounds(2000);
 });
-
-$('.imageGallery1 a').simpleLightbox();
-var $ = require('jquery');
-var SimpleLightbox = require('simple-lightbox');
-SimpleLightbox.registerAsJqueryPlugin($);

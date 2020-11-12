@@ -240,6 +240,7 @@ z-index: 160;
 #buildings-about {
   background-color: #ffffff;
   width: 55%;
+  text-align:justify;
   top: 0;
   bottom: 0;
   left: 0;
@@ -247,9 +248,11 @@ z-index: 160;
   position: relative;
   margin: auto;
   z-index: 180;
-  padding: 12px;
+  padding-top:2vh;
+  padding-bottom:2vh;
+  padding-right:3vh;
+  padding-left:3vh;
   color: #000;
-  min-height: 100vh;
 }
 
 #buildings-map {
@@ -261,6 +264,7 @@ z-index: 160;
 
 #buildings-map-about {
   background-color: #133c60;
+  text-align:justify;
   width: 35%;
   top: 0;
   bottom: 0;
@@ -313,14 +317,18 @@ z-index: 160;
 #informals-about {
   background-color: #ffffff;
   width: 55%;
+  text-align:justify;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   position: relative;
   margin: auto;
-  z-index: 101;
-  padding: 12px;
+  z-index: 180;
+  padding-top:2vh;
+  padding-bottom:2vh;
+  padding-right:3vh;
+  padding-left:3vh;
   color: #000;
 }
 
@@ -339,6 +347,7 @@ z-index: 160;
   bottom: 0;
   left: 0;
   right: 0;
+  text-align:justify;
   position: relative;
   margin: auto;
   z-index: 101;
@@ -398,6 +407,38 @@ z-index: 160;
     }
 }
 
+#vibrancy {
+  background-color: #ffffff;
+  width: 55%;
+  text-align:justify;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  margin: auto;
+  z-index: 180;
+  padding-top:2vh;
+  padding-bottom:2vh;
+  padding-right:3vh;
+  padding-left:3vh;
+  color: #000;
+}
+
+
+#crimestory {
+  background-color: #133c60;
+  width: 35%;
+  right:20%;
+  text-align:justify;
+  position: relative;
+  margin: auto;
+  z-index: 101;
+  padding: 1.4em;
+  color: #fff;
+  font-size: 1.1vw;
+  font-family: 'Roboto', sans-serif;
+}
 h1 {
   font-size: 4.2vw;
   font-family: 'Roboto Slab', sans-serif;
