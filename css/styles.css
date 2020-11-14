@@ -357,6 +357,12 @@ z-index: 160;
   font-family: 'Roboto', sans-serif;
 }
 
+#credit2 {
+  font-size:6px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
 #mangrove-banner {
   background-size: cover;
   background-repeat: no-repeat;
