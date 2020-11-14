@@ -236,6 +236,26 @@ map.addLayer({
   }
 });
 
+map.addSource('ladyville', {
+  type: 'geojson',
+  data: './data/ladyville.geojson',
+});
+
+
+map.addLayer({
+  'id': 'ladyville',
+  'type': 'fill',
+  'source': 'ladyville',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#f600f5',
+    'fill-opacity': .4,
+    'fill-outline-color': '#000000'
+  }
+});
+
 });
 
 var chapters = {
@@ -261,6 +281,18 @@ var chapters = {
     center: [-88.218718, 17.497795],
     zoom: 14.45,
     pitch: 0
+  },
+
+  'sprawlinfo': {
+    center: [-88.203689, 17.499550],
+    zoom: 12.75,
+    essential: true,
+  },
+
+  'lady': {
+    center: [-88.333221, 17.555131],
+    zoom: 12.75,
+   essential: true,
   },
 
   'vibchap': {
@@ -316,6 +348,10 @@ function setActiveChapter(chapterName) {
   if (activeChapterName === 'crimechap')
     map.setLayoutProperty('crime', 'visibility', 'visible');
   else map.setLayoutProperty('crime', 'visibility', 'none');
+
+  if (activeChapterName === 'lady')
+    map.setLayoutProperty('ladyville', 'visibility', 'visible');
+  else map.setLayoutProperty('ladyville', 'visibility', 'none');
 
 
 }
