@@ -499,7 +499,7 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 
-#chapterend {
+#bap {
   background-color: #0c273e;
   position: relative;
   color: #ffffff;
@@ -513,7 +513,7 @@ p {
   display: inline-block;
 }
 
-#chapterendbox {
+#bapbox {
   background-color: #0c273e;
   text-transform: none;
   text-shadow: 0 1px 0 black;
@@ -524,7 +524,6 @@ p {
   right: 0;
   position: absolute;
   margin: auto;
-  height: 85vh;
 }
 
 #recs1 {
@@ -538,7 +537,6 @@ p {
   position: relative;
   color: #ffffff;
   width: 100%;
-  min-height: 110vh;
   font-size: 1.1vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
@@ -555,14 +553,14 @@ p {
   padding-left: 3vh;
   color: #ffffff;
   width: 55%;
-  top: 5vh;
-  min-height: 90vh;
-  bottom: 5vh;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   position: relative;
   margin: auto;
   color: #000;
+    z-index: 101;
 }
 
 #recs3 {
@@ -633,7 +631,6 @@ p {
   bottom: 10vh;
   left: 0;
   right: 0;
-  min-height: 90vh;
   position: relative;
   margin: auto;
 }
