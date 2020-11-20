@@ -500,6 +500,94 @@ z-index: 160;
   font-family: 'Roboto', sans-serif;
 }
 
+#chapterend {
+  background-color: #0c273e;
+  position: relative;
+  color: #ffffff;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.1vw;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8vw;
+  z-index: 101;
+  text-align: justify;
+  display: inline-block;
+}
+
+#chapterendbox {
+  background-color: #0c273e;
+  text-transform: none;
+  text-shadow: 0 1px 0 black;
+  color: #ffffff;
+  width: 55%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  height: 70vh;
+}
+
+#recs1 {
+  background-color: #133c60;
+  position: relative;
+  color: #ffffff;
+  width: 100%;
+  min-height:110vh;
+  font-size: 1.1vw;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8vw;
+  z-index: 101;
+  text-align: justify;
+  display: inline-block;
+}
+
+#recs2 {
+  background-color: #133c60;
+  text-transform: none;
+  text-shadow: 0 1px 0 black;
+  color: #ffffff;
+  width: 55%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  height: 90vh;
+}
+
+#recs3 {
+  background-color: #1a4f7d;
+  position: relative;
+  color: #ffffff;
+  width: 100%;
+  min-height:100vh;
+  font-size: 1.1vw;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8vw;
+  z-index: 101;
+  text-align: justify;
+  display: inline-block;
+}
+
+#recs4 {
+  background-color: #1a4f7d;
+  text-transform: none;
+  text-shadow: 0 1px 0 black;
+  color: #ffffff;
+  width: 55%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  height: 80vh;
+}
+
+
 h1 {
   font-size: 4.2vw;
   font-family: 'Roboto Slab', sans-serif;
@@ -507,7 +595,7 @@ h1 {
 
 h2 {
   font-size: 3.1vw;
-  line-height: 1vw;
+  line-height: 3vw;
   font-family: 'Inter Bold', sans-serif;
 }
 

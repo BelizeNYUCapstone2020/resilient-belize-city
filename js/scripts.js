@@ -303,8 +303,12 @@ var chapters = {
   'crimechap': {
     center: [-88.196192, 17.491884],
     zoom: 14.45,
-  }
+  },
 
+  'downtown': {
+    center: [-88.196192, 17.491884],
+    zoom: 14.45,
+  },
 };
 
 
