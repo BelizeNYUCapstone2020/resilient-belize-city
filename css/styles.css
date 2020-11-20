@@ -530,7 +530,13 @@ z-index: 160;
 }
 
 #recs1 {
-  background-color: #133c60;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.4)),
+    url("http://belizenyucapstone2020.github.io/resilient-belize-city/images/cover.jpg");
   position: relative;
   color: #ffffff;
   width: 100%;
@@ -544,18 +550,21 @@ z-index: 160;
 }
 
 #recs2 {
-  background-color: #133c60;
-  text-transform: none;
-  text-shadow: 0 1px 0 black;
+  background-color: #ffffff;
+  padding-top:2vh;
+  padding-bottom:2vh;
+  padding-right:3vh;
+  padding-left:3vh;
   color: #ffffff;
   width: 55%;
-  top: 0;
-  bottom: 0;
+  top: 10vh;
+  bottom: 10vh;
   left: 0;
   right: 0;
+  min-height:90vh;
   position: absolute;
   margin: auto;
-  height: 90vh;
+  color:#000;
 }
 
 #recs3 {
@@ -614,47 +623,4 @@ p {
 
 img {
   max-width: 75%;
-}
-
-/* Zone toggles */
-#menu {
-  background: #000000;
-  position: absolute;
-  z-index: 1;
-  top: 10px;
-  right: 10px;
-  border-radius: 3px;
-  width: 70px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  font-family: 'Open Sans', sans-serif;
-}
-
-#menu a {
-  font-size: 12px;
-  color: #000000;
-  display: block;
-  margin: 0;
-  padding: 0;
-  padding: 8px;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  text-align: center;
-}
-
-#menu a:last-child {
-  border: none;
-}
-
-#menu a:hover {
-  background-color: #4d4544;
-  color: #ffffff;
-}
-
-#menu a.active {
-  background-color: #1f2020;
-  color: #ffffff;
-}
-
-#menu a.active:hover {
-  background: #000000;
 }
