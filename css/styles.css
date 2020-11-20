@@ -661,7 +661,6 @@ p {
   position: relative;
   color: #ffffff;
   width: 100%;
-  min-height: 125vh;
   font-size: 1.1vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
@@ -676,13 +675,13 @@ p {
   text-shadow: 0 1px 0 black;
   color: #ffffff;
   width: 55%;
-  top: 0;
+  top: 5vh;
   bottom: 0;
   left: 0;
   right: 0;
-  position: absolute;
+  position: relative;
   margin: auto;
-  height: 110vh;
+  z-index:101;
 }
 
 h1 {
@@ -704,8 +703,8 @@ h3 {
 }
 
 p {
-  font-size: 1.1vw;
-  line-height: 1.3vw;
+  font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(15px + (17 - 15) * ((100vw - 300px) / (1600 - 300)));
   font-family: 'Roboto', sans-serif;
 }
 
