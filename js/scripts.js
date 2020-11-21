@@ -62,6 +62,27 @@ map.addLayer({
   }
 });
 
+
+map.addSource('gungulung', {
+  type: 'geojson',
+  data: './data/gungulung.geojson',
+});
+
+
+map.addLayer({
+  'id': 'red',
+  'type': 'fill',
+  'source': 'gungulung',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#f60040',
+    'fill-opacity': .6,
+    'fill-outline-color': '#f60040'
+  }
+});
+
 map.addSource('kroomanpoly', {
   'type': 'geojson',
   'data': {
@@ -340,6 +361,10 @@ function setActiveChapter(chapterName) {
   if (activeChapterName === 'krooman')
     map.setLayoutProperty('krooman', 'visibility', 'visible');
   else map.setLayoutProperty('krooman', 'visibility', 'none');
+
+  if (activeChapterName === 'krooman')
+    map.setLayoutProperty('gungulung', 'visibility', 'visible');
+  else map.setLayoutProperty('gungulung', 'visibility', 'none');
 
   if (activeChapterName === 'buildings')
     map.setLayoutProperty('mimosa', 'visibility', 'visible');
