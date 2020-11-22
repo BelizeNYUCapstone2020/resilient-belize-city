@@ -63,26 +63,6 @@ map.addLayer({
 });
 
 
-map.addSource('gungulung', {
-  type: 'geojson',
-  data: './data/gungulung.geojson',
-});
-
-
-map.addLayer({
-  'id': 'red',
-  'type': 'fill',
-  'source': 'gungulung',
-  'layout': {
-    'visibility': 'none'
-  },
-  'paint': {
-    'fill-color': '#f60040',
-    'fill-opacity': .6,
-    'fill-outline-color': '#f60040'
-  }
-});
-
 map.addSource('kroomanpoly', {
   'type': 'geojson',
   'data': {
@@ -237,6 +217,27 @@ map.addLayer({
 });
 
 
+map.addSource('gungulung', {
+  type: 'geojson',
+  data: './data/gungulung.geojson',
+});
+
+
+map.addLayer({
+  'id': 'gungulung',
+  'type': 'fill',
+  'source': 'gungulung',
+  'layout': {
+    'visibility': 'none'
+  },
+  'paint': {
+    'fill-color': '#000000',
+    'fill-opacity': 0.5,
+    'fill-outline-color': '#2352ff'
+  }
+});
+
+
 map.addSource('crime', {
   type: 'geojson',
   data: './data/crime.geojson',
@@ -285,22 +286,22 @@ var chapters = {
     zoom: 13.6,
   },
 
-  'informals': {
-    duration: 6000,
-    center: [-88.218718, 17.497795],
-    zoom: 14.45,
-    pitch: 0
-  },
-
   'buildings': {
     center: [-88.203689, 17.499550],
     zoom: 13.6,
   },
 
+  'informals': {
+    duration: 6000,
+    center: [-88.22429699064536, 17.502041380242737],
+    zoom: 14.23,
+    pitch: 0
+  },
+
   'krooman': {
     duration: 6000,
-    center: [-88.218718, 17.497795],
-    zoom: 14.45,
+    center: [-88.22429699064536, 17.502041380242737],
+    zoom: 14.23,
     pitch: 0
   },
 
