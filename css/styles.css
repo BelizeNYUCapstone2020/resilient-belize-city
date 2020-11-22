@@ -368,7 +368,7 @@ p {
   right: 0;
   text-align: justify;
   position: relative;
-  z-index: 999;
+  z-index: 101;
   padding: 1.4em;
   color: #fff;
   font-size: 1.1vw;
