@@ -357,29 +357,8 @@ map.addLayer({
 'icon-allow-overlap': true
 }
 });
-map.on('click', 'places', function (e) {
-var coordinates = e.features[0].geometry.coordinates.slice();
-var description = e.features[0].properties.description;
-
-
-new mapboxgl.Popup()
-.setLngLat(coordinates)
-.setHTML(description)
-.addTo(map);
-});
-
-// Change the cursor to a pointer when the mouse is over the places layer.
-map.on('mouseenter', 'places', function () {
-map.getCanvas().style.cursor = 'pointer';
-});
-
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'places', function () {
-map.getCanvas().style.cursor = '';
-});
 
 });
-
 
 
 
@@ -493,22 +472,6 @@ function setActiveChapter(chapterName) {
 }
 
 
-// When a click event occurs on a feature in the places layer, open a popup at the
-// location of the feature, with description HTML from its properties.
-map.on('click', 'places', function (e) {
-var coordinates = e.features[0].geometry.coordinates.slice();
-var description = e.features[0].properties.description;
-
-// Ensure that if the map is zoomed out such that multiple
-// copies of the feature are visible, the popup appears
-// over the copy being pointed to.
-
-new mapboxgl.Popup()
-.setLngLat(coordinates)
-.setHTML(description)
-.setPopup(popup) // sets a popup on this marker
-.addTo(map);
-});
 
 
 //scroller
@@ -544,3 +507,29 @@ function cycleBackgrounds(interval) {
 document.addEventListener("DOMContentLoaded", function() {
   cycleBackgrounds(2000);
 });
+
+//flytobuttons
+
+$('#flyheritage').on('click', function() {
+  map.flyTo({
+    center: [-88.18648144223725, 17.495738108655736],
+    zoom: 18,
+    essential: true,
+  });
+})
+
+$('#flyjohn').on('click', function() {
+  map.flyTo({
+    center: [-88.18792585060528, 17.48877390778822],
+    zoom: 18,
+    essential: true,
+  });
+})
+
+$('#flycourt').on('click', function() {
+  map.flyTo({
+    center: [-88.18655552951776, 17.49393056960193],
+    zoom: 18,
+    essential: true,
+  });
+})
