@@ -533,3 +533,11 @@ $('#flycourt').on('click', function() {
     essential: true,
   });
 })
+
+$('#flywesley').on('click', function() {
+  map.flyTo({
+    center: [-88.18814539999876, 17.492185245822917],
+    zoom: 18,
+    essential: true,
+  });
+})
