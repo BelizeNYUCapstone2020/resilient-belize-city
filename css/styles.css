@@ -716,3 +716,9 @@ p {
 img {
   max-width: 75%;
 }
+
+.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+z-index:199;
+}

@@ -278,7 +278,110 @@ map.addLayer({
   }
 });
 
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Belize Heritage Plaza</strong>',
+'icon': 'attraction'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-88.18648144223725, 17.495738108655736]
+}
+},
+
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>St.Johns Cathedral</strong>',
+'icon': 'attraction'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-88.18792585060528, 17.48877390778822]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Belize Supreme Court</strong>',
+'icon': 'attraction'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-88.18655552951776, 17.49393056960193]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Big Wesley Church</strong>',
+'icon': 'attraction'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-88.18814539999876, 17.492185245822917]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Old Fish Market</strong>',
+'icon': 'attraction'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-88.19210295507948, 17.497213222744694]
+}
+},
+]
+}
 });
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+  'visibility': 'none',
+'icon-image': '{icon}-15',
+'icon-allow-overlap': true
+}
+});
+map.on('click', 'places', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+
+
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'places', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'places', function () {
+map.getCanvas().style.cursor = '';
+});
+
+});
+
+
+
 
 var chapters = {
   'begin': {
@@ -383,8 +486,30 @@ function setActiveChapter(chapterName) {
     map.setLayoutProperty('ladyville', 'visibility', 'visible');
   else map.setLayoutProperty('ladyville', 'visibility', 'none');
 
+  if (activeChapterName === 'downtown')
+    map.setLayoutProperty('places', 'visibility', 'visible');
+  else map.setLayoutProperty('places', 'visibility', 'none');
 
 }
+
+
+// When a click event occurs on a feature in the places layer, open a popup at the
+// location of the feature, with description HTML from its properties.
+map.on('click', 'places', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML(description)
+.setPopup(popup) // sets a popup on this marker
+.addTo(map);
+});
+
 
 //scroller
 function isElementOnScreen(id) {
