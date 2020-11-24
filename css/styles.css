@@ -145,7 +145,6 @@ p {
   position: relative;
   color: #ffffff;
   width: 100%;
-  min-height: 100vh;
   font-size: 1.1vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
@@ -164,9 +163,8 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  position: absolute;
+  position: relative;
   margin: auto;
-  height: 40vh;
 }
 
 #flood-container {
@@ -397,7 +395,6 @@ p {
     url("http://belizenyucapstone2020.github.io/resilient-belize-city/images/mangroves.jpg");
   position: relative;
   width: 100%;
-  min-height: 110vh;
   font-size: 1.1vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
@@ -409,7 +406,6 @@ p {
   text-transform: none;
   text-shadow: 0 1px 0 black;
   color: #ffffff;
-  max-height: 90vh;
   width: 55%;
   top: 0;
   bottom: 0;
