@@ -522,7 +522,6 @@ p {
   position: relative;
   color: #ffffff;
   width: 100%;
-  min-height: 100vh;
   font-size: 1.1vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8vw;
@@ -537,10 +536,10 @@ p {
   text-shadow: 0 1px 0 black;
   color: #ffffff;
   width: 55%;
-  top: 10vh;
+  top: 0;
   left: 0;
   right: 0;
-  position: absolute;
+  position: relative;
   margin: auto;
 }
 
@@ -699,7 +698,7 @@ p {
   text-shadow: 0 1px 0 black;
   color: #ffffff;
   width: 55%;
-  top: 5vh;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
