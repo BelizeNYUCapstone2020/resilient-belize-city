@@ -37,7 +37,7 @@ map.addLayer({
   },
   'paint': {
     'fill-color': '#EFC050',
-    'fill-opacity': .8,
+    'fill-opacity': .9,
     'fill-outline-color': '#EFC050'
   }
 });
