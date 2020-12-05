@@ -329,7 +329,7 @@ map.addSource('places', {
 },
 'geometry': {
 'type': 'Point',
-'coordinates': [-88.18814539999876, 17.492185245822917]
+'coordinates': [-88.18814137736486, 17.491231680901667]
 }
 },
 {
